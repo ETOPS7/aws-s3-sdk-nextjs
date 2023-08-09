@@ -3,7 +3,7 @@
 This is a [Next.js](https://nextjs.org/) boilerplate on how to organize upload, download, and delete files from your AWS S3 Bucket. It also utilizes the fast and modern React UI library, [NEXT UI](https://nextui.org/), and [Tailwind CSS](https://tailwindcss.com/), a highly customizable, low-level CSS framework. You can learn more about AWS S3 [here](https://aws.amazon.com/s3/).
 
 
-![AWS S3 with Next.js](./public/aws_next_banner.png)
+![AWS S3 with Next.js](./public/aws_next_baner.png)
 
 ## Getting Started
 
