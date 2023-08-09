@@ -35,5 +35,4 @@ Make sure to configure your AWS S3 credentials properly. You can find detailed i
 📂 Download files from S3  
 ❌ Delete files from S3  
 
-**Contributing**
 Feel free to contribute to this project by submitting issues, pull requests, or providing feedback.

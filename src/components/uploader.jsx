@@ -19,7 +19,7 @@ const FileUploader = () => {
     if (!file || uploading) return
 
     if (files.some((existingFile) => existingFile.Key === file.name)) {
-      console.warn('Файл с таким именем уже существует:', file.name)
+      console.warn('A file with that name already exists:', file.name)
       return
     }
 
@@ -36,14 +36,14 @@ const FileUploader = () => {
       const command = new PutObjectCommand(params)
       await s3Client.send(command)
       setFiles((prevFiles) => [...prevFiles, { Key: file.name }])
-      console.log('Файл успешно загружен:', file.name)
+      console.log('File successfully uploaded:', file.name)
 
       if (fileInputRef.current) {
         fileInputRef.current.value = ''
       }
       setFile(null)
     } catch (err) {
-      console.error('Ошибка загрузки:', err)
+      console.error('Error uploading:', err)
     } finally {
       setUploading(false)
     }

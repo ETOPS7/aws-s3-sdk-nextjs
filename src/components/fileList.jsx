@@ -20,7 +20,7 @@ const FileList = () => {
       const data = await s3Client.send(command)
       setFiles(data.Contents || [])
     } catch (err) {
-      console.error('Ошибка получения списка файлов:', err)
+      console.error('Error retrieving file list:', err)
     }
   }
 
@@ -37,11 +37,11 @@ const FileList = () => {
 
       const url = await getSignedUrl(s3Client, command, { expiresIn: 3600 })
 
-      window.open(url, '_blank') // Открывает URL в новой вкладке
+      window.open(url, '_blank') 
 
-      console.log('Файл успешно открыт:', fileName)
+      console.log('File successfully opened:', fileName)
     } catch (err) {
-      console.error('Ошибка при открытии файла:', err)
+      console.error('Error opening file:', err)
     }
   }
 
@@ -53,9 +53,10 @@ const FileList = () => {
       })
 
       await s3Client.send(command)
-      console.log('Файл успешно удален:', fileName)
+      console.log('File successfully deleted:', fileName)
     } catch (err) {
-      console.error('Ошибка удаления файла:', err)
+      console.error('Error deleting file:', err)
+
       throw err
     }
   }
