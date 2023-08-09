@@ -18,7 +18,8 @@ NEXT_PUBLIC_REGION=your-region
 NEXT_PUBLIC_BUCKET_NAME=your-bucket-name
 ```
 
-Running the Development Server
+**Running the Development Server**
+
 First, run the development server:
 
 ```zsh
@@ -30,9 +31,9 @@ npm run dev
 Make sure to configure your AWS S3 credentials properly. You can find detailed instructions on how to do this in the official AWS S3 documentation.
 
 **Features**
-🗳️ Upload files to S3 
-📂 Download files from S3 
-❌ Delete files from S3 
+🗳️ Upload files to S3  
+📂 Download files from S3  
+❌ Delete files from S3  
 
 **Contributing**
 Feel free to contribute to this project by submitting issues, pull requests, or providing feedback.
