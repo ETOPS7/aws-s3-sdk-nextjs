@@ -30,7 +30,7 @@ npm run dev
 **AWS S3 Configuration**
 Make sure to configure your AWS S3 credentials properly. You can find detailed instructions on how to do this in the official AWS S3 documentation.
 
-**Features**
+**Features**  
 🗳️ Upload files to S3  
 📂 Download files from S3  
 ❌ Delete files from S3  
