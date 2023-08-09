@@ -1,38 +1,38 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🗂️ AWS S3 Bucket SDK v3 with NEXT.js
+
+This is a [Next.js](https://nextjs.org/) boilerplate on how to organize upload, download, and delete files from your AWS S3 Bucket. It also utilizes the fast and modern React UI library, [NEXT UI](https://nextui.org/), and [Tailwind CSS](https://tailwindcss.com/), a highly customizable, low-level CSS framework. You can learn more about AWS S3 [here](https://aws.amazon.com/s3/).
+
+
+![AWS S3 with Next.js](/public/aws_next_banner.png)
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+Before you begin, you will need to register an account with AWS and set up an S3 Bucket. Fill in your credentials in the `.env` file as follows:
+
+```env
+NEXT_PUBLIC_ACCESS_KEY=your-access-key
+NEXT_PUBLIC_SECRET_ACCESS_KEY=your-secret-access-key
+NEXT_PUBLIC_REGION=your-region
+NEXT_PUBLIC_BUCKET_NAME=your-bucket-name
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Running the Development Server
+First, run the development server:
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```zsh
+npm i
+npm run dev
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+**AWS S3 Configuration**
+Make sure to configure your AWS S3 credentials properly. You can find detailed instructions on how to do this in the official AWS S3 documentation.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+**Features**
+🗳️ Upload files to S3
+📂 Download files from S3
+❌ Delete files from S3
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+**Contributing**
+Feel free to contribute to this project by submitting issues, pull requests, or providing feedback.
