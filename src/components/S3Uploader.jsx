@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react'
-import { s3Client } from './S3Client'
+import { s3Client } from '../sdk/S3Client'
 import { PutObjectCommand } from '@aws-sdk/client-s3'
 import { useFiles } from '../pages/FileContext'
 import { Button } from '@nextui-org/react'

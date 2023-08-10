@@ -8,9 +8,9 @@ import {
 import { getSignedUrl } from '@aws-sdk/s3-request-presigner'
 import { Button } from '@nextui-org/react'
 import { CameraIcon } from '../pages/icons/CameraIcons'
-import { s3Client } from './S3Client'
+import { s3Client } from '../sdk/S3Client'
 
-const FileList = () => {
+export default function FileList(){
   const bucketName = process.env.NEXT_PUBLIC_BUCKET_NAME
   const { files, setFiles } = useFiles()
 
@@ -37,7 +37,7 @@ const FileList = () => {
 
       const url = await getSignedUrl(s3Client, command, { expiresIn: 3600 })
 
-      window.open(url, '_blank') 
+      window.open(url, '_blank')
 
       console.log('File successfully opened:', fileName)
     } catch (err) {
@@ -95,4 +95,3 @@ const FileList = () => {
   )
 }
 
-export default FileList

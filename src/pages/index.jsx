@@ -1,26 +1,33 @@
 import Head from 'next/head'
-import Uploader from '../components/uploader'
-import FileList from '../components/fileList'
 import Image from 'next/image'
 import profilePic from '/public/aws_next_baner.png'
+import Link from 'next/link'
 
 export default function Home() {
   return (
     <div>
       <Head>
-        <title>Next.js AWS S3</title>
+        <title>Next.js AWS</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <main className="flex flex-col items-center min-h-screen">
-        <h1 className="text-4xl mt-10 mb-5">AWS S3 Bucket</h1>
-        <div className="flex items-center justify-center mb-5">
+      <main className="flex flex-col items-center justify-center ">
+        <div className="flex items-center justify-center mb-5 mt-10">
           <Image src={profilePic} height={200} alt="baner" priority={true} />
         </div>
-        <div className="flex flex-col items-center mb-5">
-          <Uploader />
+        <div className="flex space-x-4">
+          <Link
+            href="/dynamodb"
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          >
+            DynamoDB
+          </Link>
+          <Link
+            href="/s3bucket"
+            className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+          >
+            S3 Bucket
+          </Link>
         </div>
-        <FileList />
       </main>
     </div>
   )
