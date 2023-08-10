@@ -7,7 +7,7 @@ import {
 } from '@aws-sdk/client-s3'
 import { getSignedUrl } from '@aws-sdk/s3-request-presigner'
 import { Button } from '@nextui-org/react'
-import { CameraIcon } from '../pages/icons/CameraIcons'
+import { CameraIcon } from './icons/CameraIcons'
 import { s3Client } from '../sdk/S3Client'
 
 export default function FileList(){
