@@ -1,6 +1,6 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 import { s3Client } from '../sdk/S3Client'
-import { PutObjectCommand } from '@aws-sdk/client-s3'
+import { PutObjectCommand, HeadBucketCommand } from '@aws-sdk/client-s3'
 import { useFiles } from '../pages/FileContext'
 import { Button } from '@nextui-org/react'
 
@@ -9,14 +9,29 @@ const FileUploader = () => {
   const [file, setFile] = useState(null)
   const { files, setFiles } = useFiles()
   const [uploading, setUploading] = useState(false)
+  const [bucketStatus, setBucketStatus] = useState(null)
   const fileInputRef = useRef(null)
+
+  useEffect(() => {
+    const checkBucketStatus = async () => {
+      try {
+        const command = new HeadBucketCommand({ Bucket: bucketName })
+        await s3Client.send(command)
+        setBucketStatus('Bucket is available')
+      } catch (err) {
+        setBucketStatus('Bucket is not available')
+      }
+    }
+
+    checkBucketStatus()
+  }, [bucketName])
 
   const handleFileChange = (e) => {
     setFile(e.target.files[0])
   }
 
   const handleUpload = async () => {
-    if (!file || uploading) return
+    if (!file || uploading || bucketStatus !== 'Bucket is available') return
 
     if (files.some((existingFile) => existingFile.Key === file.name)) {
       console.warn('A file with that name already exists:', file.name)
@@ -51,6 +66,9 @@ const FileUploader = () => {
 
   return (
     <form className="flex items-center space-x-6">
+      <div style={{ color: bucketStatus === 'Bucket is available' ? 'green' : 'red' }}>
+        {bucketStatus}
+      </div>
       <label className="block">
         <span className="sr-only">Choose file for download</span>
         <input
@@ -70,7 +88,7 @@ const FileUploader = () => {
         color="warning"
         variant="ghost"
         onClick={handleUpload}
-        disabled={uploading}
+        disabled={uploading || bucketStatus !== 'Bucket is available'}
       >
         {uploading ? 'Uploading...' : 'Upload'}
       </Button>

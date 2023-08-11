@@ -1,7 +1,8 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import profilePic from '/public/aws_next_baner.png'
-import Link from 'next/link'
+import NextLink from 'next/link'
+import { Link } from '@nextui-org/react'
 
 export default function Home() {
   return (
@@ -17,15 +18,30 @@ export default function Home() {
         <div className="flex space-x-4">
           <Link
             href="/dynamodb"
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            as={NextLink}
+            color="primary"
+            underline="hover"
+            isBlock
           >
             DynamoDB
           </Link>
           <Link
             href="/s3bucket"
-            className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+            as={NextLink}
+            color="success"
+            underline="hover"
+            isBlock
           >
             S3 Bucket
+          </Link>
+          <Link
+            href="/lambda"
+            as={NextLink}
+            color="warning"
+            underline="hover"
+            isBlock
+          >
+            Lambda
           </Link>
         </div>
       </main>

@@ -1,8 +1,8 @@
-# 🗂️ AWS SDK v3: S3 Bucket & DynamoDB with NEXT.js
+# 🗂️ AWS SDK v3: S3 Bucket & DynamoDB & Lambda with NEXT.js
 
-This is a [Next.js](https://nextjs.org/) boilerplate demonstrating how to organize upload, download, and delete files from your AWS S3 Bucket, as well as how to work with DynamoDB. It also utilizes the fast and modern React UI library, [NEXT UI](https://nextui.org/), and [Tailwind CSS](https://tailwindcss.com/). You can learn more about AWS S3 [here](https://aws.amazon.com/s3/) and about DynamoDB [here](https://aws.amazon.com/dynamodb/).
+This is a [Next.js](https://nextjs.org/) boilerplate demonstrating how to organize upload, download, and delete files from your AWS S3 Bucket, as well as how to work with DynamoDB and AWS Lambda Functions. It also utilizes the fast and modern React UI library (just for example), [NEXT UI](https://nextui.org/), and [Tailwind CSS](https://tailwindcss.com/). You can learn more about AWS S3 [here](https://aws.amazon.com/s3/) and about DynamoDB [here](https://aws.amazon.com/dynamodb/) and Lambda [here](https://aws.amazon.com/lambda/).
 
-![AWS S3 & DynamoDB with Next.js](./public/aws_next_baner.png)
+![AWS S3 & DynamoDB & Lambda with Next.js](./public/aws_next_baner.png)
 
 ## Getting Started
 
@@ -35,6 +35,7 @@ Features
 📂 Download files from S3  
 ❌ Delete files from S3  
 📊 Work with tables in DynamoDB  
+💊 Work with functions in Lambda    
 
 Feel free to contribute to this project by submitting issues, pull requests, or providing feedback.
 
