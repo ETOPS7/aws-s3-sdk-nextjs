@@ -1,5 +1,5 @@
-import S3Uploader from '../../components/S3Uploader'
-import FileList from '../../components/FileList'
+import S3Uploader from '@/components/S3Uploader'
+import FileList from '@/components/FileList'
 import Image from 'next/image'
 import profilePic from '/public/s3_bucket_logo.png'
 import NextLink from 'next/link'
@@ -12,8 +12,7 @@ export default function S3BucketPage() {
         <Image src={profilePic} height={200} alt="baner" priority={true} />
       </div>
       <div className="flex items-center justify-center mb-5">
-      <Link href="/" as={NextLink}
-        >
+        <Link href="/" as={NextLink}>
           Return to Home
         </Link>
       </div>
