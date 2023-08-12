@@ -10,7 +10,7 @@ import { Button } from '@nextui-org/react'
 import { CameraIcon } from './icons/CameraIcons'
 import { s3Client } from '../sdk/S3Client'
 
-const FileList=()=>{
+ export default function FileList(){
   const bucketName = process.env.NEXT_PUBLIC_BUCKET_NAME
   const { files, setFiles } = useFiles()
 
@@ -94,5 +94,3 @@ const FileList=()=>{
     </div>
   )
 }
-
-export default FileList
