@@ -1,6 +1,6 @@
 // pages/_app.js
 import { NextUIProvider } from '@nextui-org/react'
-import { FileProvider } from './FileContext'
+import { FileProvider } from '../components/FileContext'
 import '@/styles/globals.css'
 
 function App({ Component, pageProps }) {

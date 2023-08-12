@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react'
 import { s3Client } from '../sdk/S3Client'
 import { PutObjectCommand, HeadBucketCommand } from '@aws-sdk/client-s3'
-import { useFiles } from '../pages/FileContext'
+import { useFiles } from './FileContext'
 import { Button } from '@nextui-org/react'
 
 const FileUploader = () => {
@@ -66,7 +66,11 @@ const FileUploader = () => {
 
   return (
     <form className="flex items-center space-x-6">
-      <div style={{ color: bucketStatus === 'Bucket is available' ? 'green' : 'red' }}>
+      <div
+        style={{
+          color: bucketStatus === 'Bucket is available' ? 'green' : 'red',
+        }}
+      >
         {bucketStatus}
       </div>
       <label className="block">

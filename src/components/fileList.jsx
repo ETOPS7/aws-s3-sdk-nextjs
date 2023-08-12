@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { useFiles } from '../pages/FileContext'
+import { useFiles } from './FileContext'
 import {
   ListObjectsV2Command,
   GetObjectCommand,
@@ -10,7 +10,7 @@ import { Button } from '@nextui-org/react'
 import { CameraIcon } from './icons/CameraIcons'
 import { s3Client } from '../sdk/S3Client'
 
-export default function FileList(){
+const FileList=()=>{
   const bucketName = process.env.NEXT_PUBLIC_BUCKET_NAME
   const { files, setFiles } = useFiles()
 
@@ -95,3 +95,4 @@ export default function FileList(){
   )
 }
 
+export default FileList
