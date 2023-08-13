@@ -1,4 +1,4 @@
-import { client } from '@/sdk/dynamodbClient';
+import { client } from '../../sdk/dynamodbClient';
 import {
   ScanCommand,
   PutItemCommand,
