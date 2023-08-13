@@ -1,8 +1,11 @@
 {
   "compilerOptions": {
+    "lib": ["es6", "dom"],
     "baseUrl": ".",
     "paths": {
-      "@/components/*": ["src/components/*"]
+      "@/components/*": ["src/components/*"],
+      "@/styles/*": ["src/styles/*"],
+      "@/sdk/*": ["src/sdk/*"]
     }
   }
 }
