@@ -1,4 +1,4 @@
-import FileList from '../../components/FileList'
+import FileList from '../../components/fileList'
 import S3Uploader from '../../components/S3Uploader' 
 import Image from 'next/image'
 import profilePic from '/public/s3_bucket_logo.png'
