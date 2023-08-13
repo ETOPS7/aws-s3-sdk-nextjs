@@ -39,7 +39,7 @@ const FileList = () => {
 
       window.open(url, '_blank')
 
-      console.log('File successfully opened:', fileName)
+      console.log('This file successfully opened:', fileName)
     } catch (err) {
       console.error('Error opening file:', err)
     }
