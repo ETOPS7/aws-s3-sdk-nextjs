@@ -1,5 +1,5 @@
 import S3Uploader from '@/components/S3Uploader'
-import FileList from '@/components/FileList'
+import FileList from '../../components/FileList'
 import Image from 'next/image'
 import profilePic from '/public/s3_bucket_logo.png'
 import NextLink from 'next/link'
