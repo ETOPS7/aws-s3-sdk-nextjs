@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import profilePic from '/public/aws_next_baner.png'
+import profilePic from '../../public/aws_next_baner.png'
 import NextLink from 'next/link'
 import { Link } from '@nextui-org/react'
 
