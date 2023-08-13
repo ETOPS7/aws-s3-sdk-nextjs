@@ -1,5 +1,5 @@
 import React from 'react'
-import DynamoDBTable from '@/components/GetTable'
+import DynamoDBTable from '../../components/GetTable'
 import Image from 'next/image'
 import profilePic from '/public/dynamodb_logo.png'
 import NextLink from 'next/link'

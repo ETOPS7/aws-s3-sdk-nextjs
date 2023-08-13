@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import { lambdaClient } from '@/sdk/lambdaClient'
+import React, { useState } from 'react'
+import { lambdaClient } from '../../sdk/lambdaClient'
 import { InvokeCommand } from '@aws-sdk/client-lambda'
 
 import Image from 'next/image'

@@ -1,4 +1,4 @@
-import S3Uploader from '@/components/S3Uploader'
+import S3Uploader from '../../components/S3Uploader'
 import FileList from '../../components/FileList.jsx';
 import Image from 'next/image'
 import profilePic from '/public/s3_bucket_logo.png'
